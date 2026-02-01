@@ -1,0 +1,80 @@
+using System;
+using System.Linq;
+
+namespace Aguazucal;
+
+public static class Program
+{
+    public static void Main()
+    {
+
+        for (int i = 0; i <= 1; i++)
+        {
+            Console.WriteLine("Optons Game: elige una de las siguientes dificultades: ");
+            Console.WriteLine("1: Facil. 2: Medio. 3: HardCore");
+
+            int jugadorDificultad = Convert.ToInt32(Console.ReadLine());
+
+            if (jugadorDificultad == 1)
+            {
+                Console.WriteLine("Elija tema");
+                Console.WriteLine("1: Literatura. 2: Videojuegos.");
+
+                int jugadorTema1 = Convert.ToInt32(Console.ReadLine());
+
+                if (jugadorTema1 == 1)
+                {
+                    Pregunta1();
+                }
+                if (jugadorTema1 == 2)
+                {
+                    Pregunta2();
+                }
+            }
+            i++;
+        }
+    }
+
+    static void Pregunta1()
+    {
+        Console.WriteLine("Cual es el creador de las historias de Cutholu?");
+        Console.WriteLine("1: H.P.Lovecraft 2: Alejo Carpentier 3: un deconocido del siglo XVIII");
+        int jugadorI1 = Convert.ToInt32(Console.ReadLine());
+
+        if (jugadorI1 == 1)
+        {
+            Console.WriteLine("GANASTE");
+        }
+        if (jugadorI1 != 1)
+        {
+            Console.WriteLine("Peldiste");
+            Console.WriteLine("La respuesta correcta es: H.P.Lovecraft");
+        }
+    }
+
+    static void Pregunta2()
+    {
+        Console.WriteLine("Cual es uno de los primeros RPG mas importantes que se volvio popular?");
+        Console.WriteLine("1: D&D. 2: Diablo II. 3: Dark Souls I.");
+
+        int jugadorI2 = Convert.ToInt32(Console.ReadLine());
+
+        if (jugadorI2 == 1)
+        {
+            Console.WriteLine("GANASTE");
+        }
+        else
+        {
+            Console.WriteLine("Peldio el pito");
+        }
+    }
+}
+
+public class POINTS
+{
+    public int jugadorPoints;
+    public POINTS(int jugadorPoints)
+    {
+        this.jugadorPoints = jugadorPoints;
+    }
+}
