@@ -1,0 +1,1 @@
+# MyPhCODE Este repositorio contiene mis códigos de prueba en C#. No es un proyecto profesional, solo ejemplos para aprender y compartir. ## Cómo usar - Descarga el código. - Ábrelo en Visual Studio o cualquier editor de C#. - Compílalo ya.
